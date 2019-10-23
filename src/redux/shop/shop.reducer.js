@@ -1,4 +1,5 @@
 import ShopActionTypes from "./shop.types";
+import { CartActionTypes } from "../cart/cart.types";
 
 const INITIAL_STATE = {
   collections: null,
@@ -24,6 +25,11 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isFetching: false,
         errorMessage: action.payload
+      };
+    case CartActionTypes.CLEAR_CART:
+      return {
+        ...state,
+        cartItems: []
       };
     default:
       return state;
