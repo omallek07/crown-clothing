@@ -1,4 +1,4 @@
-import { all, call } from 'redux-sage/effects';
+import { all, call } from 'redux-saga/effects';
 
 import { userSagas } from './user/user.types';
 import { cartSagas } from './cart/cart.types';
